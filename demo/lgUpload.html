@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div>
+      <input type="file" id="btn" accept=".csv" />
+    </div>
+    <button class="aa">upload</button>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
+
+    <script>
+      let btn = document.querySelector("#btn");
+
+      function handleUpload(e) {
+        let file = e.target.files[0];
+        // let fileSize = file.size / 1024 / 1024 < 2;
+        // if (!fileSize) {
+        //     console.log('上传文件大小不能超过 2MB!')
+        //     return false;
+        // }
+        let formData = new FormData();
+        formData.append("file", file); // 此处必须传file字段名
+        let xhr = new XMLHttpRequest();
+        xhr.open("post", "http://localhost:5001/lgMulityInsert", true);
+        xhr.send(formData);
+      }
+      btn.addEventListener("change", handleUpload);
+    </script>
+  </body>
+</html>

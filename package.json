@@ -1,0 +1,36 @@
+{
+  "name": "elasticsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node ./src/app.js",
+    "lg": "node  --max_old_space_size=8192 ./src/lg_import.js",
+    "lgtest": "node ./src/elastic/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivanzgh/elasticsearch.git"
+  },
+  "author": "zgh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivanzgh/elasticsearch/issues"
+  },
+  "homepage": "https://github.com/Ivanzgh/elasticsearch#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.6.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "iconv-lite": "^0.5.1",
+    "morgan": "^1.10.0",
+    "multiparty": "^4.2.1",
+    "randomjson": "^1.0.9"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^1.0.3"
+  }
+}

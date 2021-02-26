@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // $.ajax({
+  //   method: 'GET',
+  //   url:'http://130.10.8.111/services/mapsearch/town?keyword=大兴区&key=123456',
+  //   success: function (data) {
+  //     console.log(data);
+  //   }
+  // })
+
+  // $.ajax({
+  //   method: 'GET',
+  //   url:'http://130.10.8.111/services/mapsearch/getTownByName?keyword=方庄&key=123456',
+  //   success: function (data) {
+  //     console.log(data);
+  //   }
+  // })
+  
+  $.ajax({
+    method: 'GET',
+    url:'http://130.10.8.111/services/mapsearch/lgAreaCount?location=[116.52325,39.87126]&distance=10km&key=123456',
+    success: function (data) {
+      console.log(data);
+    }
+  })
+</script>

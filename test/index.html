@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+  </head>
+  <body>
+    <h1>hhahahahah</h1>
+  </body>
+</html>
+<script>
+  // $.ajax({
+  //   method: 'GET',
+  //   url:'/services/mapsearch/town?keyword=大兴区&key=123456',
+  //   success: function (data) {
+  //     console.log(data);
+  //   }
+  // })
+
+  // $.ajax({
+  //   method: 'GET',
+  //   url:'http://192.168.18.19/services/mapsearch/searchpgzlkbyxzc?xzc=丁村&key=123456',
+  //   success: function (data) {
+  //     console.log(data);
+  //   }
+  // })
+
+  // $.ajax({
+  //   method: 'GET',
+  //   url:'http://130.10.8.111/services/mapsearch/getTownByName?keyword=方庄&key=123456',
+  //   success: function (data) {
+  //     console.log(data);
+  //   }
+  // })
+  $.ajax({
+    method: "GET",
+    url: "/lgAreaCount?location=[[113.5,39.8],[116.4,35.8]]&key=123456",
+    success: function (data) {
+      console.log(data);
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+</script>
